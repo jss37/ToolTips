@@ -1,0 +1,300 @@
+<html>
+<style>
+body {
+margin-left: 0;
+  background-color: #0c5449;;
+  background-image:  radial-gradient(#2c2c2c 0.6000000000000001px, transparent 0.6000000000000001px), radial-gradient(#2c2c2c 0.6000000000000001px, #48756e 0.6000000000000001px);
+  background-size: 24px 24px;
+background-position: 0 0,12px 12px;
+
+  
+}
+
+.section {
+  display: flex;
+ min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  
+  
+  
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  height: 800px;
+  width: 800px;
+}
+
+.image {
+  height: 650px;
+  position: fixed;
+  width: 1400px;
+  top: 7%;
+  margin-left: 3%;
+  background-size: contain;
+  background-size: 1400px 650px;
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  filter: blur(0px);
+  opacity: 0;
+  transition: filter 1s ease, opacity 0s ease;
+  transition-duration: .5s;
+  border: 5px solid #0c5449;
+}
+
+.section.active .image {
+  opacity: 1;
+  filter: blur(0);
+  
+
+}
+
+.links {
+    margin-top: 300px;
+    margin-bottom: 300px;
+    font-size: 80px;
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+nav {
+    position: fixed;
+    z-index: 3;
+    text-align: center;
+   top: 0;
+   width: 100%;
+   background-color: #0c5449;
+}
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+}
+
+li {
+  float: left;
+  
+}
+
+li a {
+  display: block;
+  padding: 12px;
+
+}
+.button {
+  background-color :#0c5449; /* Green */
+  border: none;
+  color: #ffc000;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline: none;
+
+}
+
+.button:hover {
+  background-color: #ffc000;
+  color: #0c5449;
+}
+.divider{
+    width:65px;
+    height:auto;
+    display:inline-block;
+    background-color: #0c5449;
+}
+a {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    color: #ffc000;
+}
+
+a:hover,a:visited:hover {
+  color: #0c5449;
+}
+a:visited,a:active {
+  color: #ffc000;
+  text-decoration: none;
+}
+
+img {
+	width: 700px;
+    height: 700px;
+	position: fixed;
+	animation: rotate 1s linear infinite;
+	animation-play-state: paused;
+	animation-delay: calc(var(--scroll) * -1s);
+	animation-iteration-count: 1;
+	animation-fill-mode: both;
+}
+
+@keyframes  rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+  @media only screen and (max-width:1400px) {
+    .image-container {
+      width: 100%;
+      height: auto;
+      align-content: left;
+      border: none;
+    }
+    
+  .image {
+  background-size: 100%; 
+  height:auto;
+  position: relative;
+  border: inherit;
+  }
+
+  @media screen and (max-height:600px){
+    .image {
+  background-size: 100% auto; 
+  height:800px;
+  position: relative;
+  border: inherit;
+  }
+  }
+}
+</style>
+<body>
+    <nav>
+        <ul>
+            <button class="button"><li><a href="file:///C:/Users/jacob/Downloads/template.html">Home</a></li></button>
+            <div class="divider"></div>
+            <button class="button"><li><a href="#home">Return to the top</a></li></button>
+            <div class="divider"></div>
+            <button class="button"><li><a href="#news">See more</a></li></button>
+            <div class="divider"></div>
+            <button class="button"><li><a href="https://crcrjx5guewzuatspkobdg.on.drv.tw/vizpagejuly.html">Visualizations</a></li></button>
+          </ul>
+    </nav>
+<div class="section" id="home">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide1.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide2.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide3.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide4.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide5.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide6.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide7.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide8.PNG')"></div>
+    <img src="../arrow.png" alt="arrow" style=" position: relative;left: 250px;top: 5px;bottom: 50px;">
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide9.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide10.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide11.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide12.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide13.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide14.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide15.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide16.PNG')"></div>
+  </div>
+</div>
+
+<script>
+  window.onscroll = function() {
+    changeImage()
+  }
+
+  function changeImage() {
+    var scroll = window.scrollY + (window.innerHeight / 3);
+    [...document.getElementsByClassName('section')].forEach(el => {
+      el.classList.remove('active');
+      if (el.offsetTop <= scroll && el.offsetTop + el.offsetHeight > scroll) {
+        el.classList.add('active');
+      }
+    })
+  }
+  changeImage();
+
+  window.addEventListener('scroll', () => {
+				document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight))
+			})
+</script>
+<script src="https://www.drv.tw/inc/wd.js?s=crcrjx5guewzuatspkobdg"></script></body>
+    <div class="links" id="news">
+     <a href="file:///C:/Users/jacob/Downloads/Scroller/DataStory4/DataStory4.html"><img src="https://phoenix.wayne.edu/homepage/privacytile.png" height="150px" width="260px"></a>   
+
+    <img src="https://phoenix.wayne.edu/homepage/concepttile.png" height="150px" width="260px">
+
+
+  <img src="https://phoenix.wayne.edu/homepage/whatdatatile.png" height="150px" width="260px">
+</p>
+   <p>
+
+    <img src="https://phoenix.wayne.edu/homepage/detroittile-grey.png" height="150px" width="260px">
+
+
+  <img src="https://phoenix.wayne.edu/homepage/favestile-grey.png" height="150px" width="260px">
+</p>
+        Use our map or learn in our lab:
+        <a href="file:///C:/Users/jacob/Downloads/Scroller/DataStory4/DataStory4.html"><img  src="./tooltips.png" style="height: 400px;height: 200px;float: left;margin-left: 15%;margin-top: 1%;"></a>
+        <img  src="./maplink-removebg-preview.png" style="height: 450px;height: 210px;float: right;margin-right: 15%;"></div>
+
+</html>

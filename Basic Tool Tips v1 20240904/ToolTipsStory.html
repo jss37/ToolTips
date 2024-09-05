@@ -1,0 +1,228 @@
+<html>
+<style>
+body {
+margin-left: 0;
+  background-color: white;
+  
+
+  
+}
+
+.section {
+  display: flex;
+ min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  
+  
+  
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  height: 800px;
+  width: 800px;
+}
+
+.image {
+  height: 55vw;
+  position: fixed;
+  width: 99.5%;
+  top: 3%;
+  background-color: white;
+  background-size: contain;
+  background-size: 100% 53vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  filter: blur(0px);
+  opacity: 0;
+  transition: filter 1s ease, opacity 1s ease;
+  transition-duration: 1.8s;
+  border: 5px solid #0c5449;
+}
+
+.section.active .image {
+  opacity: 1;
+  filter: blur(0);
+  
+
+}
+.footer {
+    z-index: 2;
+    margin-top: 300px;
+
+}
+.links {
+    margin-top: 300px;
+    margin-bottom: 300px;
+    font-size: 80px;
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+nav {
+    position: fixed;
+    z-index: 3;
+    text-align: center;
+   top: 0;
+   width: 100%;
+   background-color: #0c5449;
+}
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+}
+
+li {
+  float: left;
+  
+}
+
+li a {
+  display: block;
+  padding: 12px;
+
+}
+.button {
+  background-color :#0c5449; /* Green */
+  border: none;
+  color: #ffc000;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline: none;
+
+}
+
+.button:hover {
+  background-color: #ffc000;
+  color: #0c5449;
+}
+.divider{
+    width:65px;
+    height:auto;
+    display:inline-block;
+    background-color: #0c5449;
+}
+a {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    color: #ffc000;
+}
+
+a:hover,a:visited:hover {
+  color: #0c5449;
+}
+a:visited {
+  color: #ffc000;
+  text-decoration: none;
+}
+  @media only screen and (max-width:1400px) {
+    .image-container {
+      width: 100%;
+      height: auto;
+      align-content: left;
+      border: none;
+    }
+    
+  .image {
+  background-size: 100%; 
+  height:auto;
+  position: relative;
+  border: inherit;
+  }
+
+  @media screen and (max-height:600px){
+    .image {
+  background-size: 100% auto; 
+  height:800px;
+  position: relative;
+  border: inherit;
+  }
+  }
+}
+</style>
+<body>
+    <nav>
+        <ul>
+          <button class="button"><li><a href="file:///C:/Users/jacob/Downloads/template.html">Home</a></li></button>
+          <div class="divider"></div>          
+            <button class="button"><li><a href="#home">Return to the top</a></li></button>
+            <div class="divider"></div>
+            <button class="button"><li><a href="https://phoenix.wayne.edu/learning-lab">Learning Lab</a></li></button>
+            <div class="divider"></div>
+            <button class="button"><li><a href="https://crcrjx5guewzuatspkobdg.on.drv.tw/vizpagejuly.html">Non-Animated Version</a></li></button>
+          </ul>
+    </nav>
+<div class="section" id="home">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide2.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide3.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide4.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide5.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide6.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide7.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide8.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide9.PNG')"></div>
+  </div>
+</div>
+<div class="section">
+  <div class="image-container">
+    <div class="image" style="background-image: url('./Slide10.PNG')"></div>
+  </div>
+</div>
+</div>
+
+<script>
+  window.onscroll = function() {
+    changeImage()
+  }
+
+  function changeImage() {
+    var scroll = window.scrollY + (window.innerHeight / 3);
+    [...document.getElementsByClassName('section')].forEach(el => {
+      el.classList.remove('active');
+      if (el.offsetTop <= scroll && el.offsetTop + el.offsetHeight > scroll) {
+        el.classList.add('active');
+      }
+    })
+  }
+  changeImage();
+</script>
+<script src="https://www.drv.tw/inc/wd.js?s=crcrjx5guewzuatspkobdg"></script></body>
+
+</html>
